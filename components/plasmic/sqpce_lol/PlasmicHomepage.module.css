@@ -109,13 +109,7 @@
   font-size: 40px;
   font-family: "Raleway", sans-serif;
 }
-.link___1Lxd {
-  position: absolute;
-  top: 699px;
-  left: 625px;
-  display: flex;
-}
-.svg__dh27R {
+.svg__vB0Id {
   object-fit: cover;
   max-width: 100%;
   color: #088da5;
@@ -124,28 +118,9 @@
   height: 56px;
   display: block;
   transform-origin: top left;
-  flex-shrink: 0;
-}
-.link__i3J5 {
   position: absolute;
-  top: 61.21%;
-  left: 47.69%;
-  display: flex;
-}
-.svg__u77K4 {
-  object-fit: cover;
-  max-width: 100%;
-  color: #088da5;
-  width: 64px;
-  height: 52px;
-  display: block;
-  flex-shrink: 0;
-}
-.link__gDs3P {
-  position: absolute;
-  top: 61.11%;
-  left: 52.92%;
-  display: flex;
+  left: 619px;
+  top: 697px;
 }
 .svg__lL0ED {
   object-fit: cover;
@@ -154,5 +129,18 @@
   width: 69px;
   height: 53px;
   display: block;
-  flex-shrink: 0;
+  position: absolute;
+  left: 692px;
+  top: 648px;
+}
+.svg__u77K4 {
+  object-fit: cover;
+  max-width: 100%;
+  color: #088da5;
+  width: 64px;
+  height: 52px;
+  display: block;
+  position: absolute;
+  left: 774px;
+  top: 647px;
 }
