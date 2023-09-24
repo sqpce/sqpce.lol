@@ -21,3 +21,77 @@
 .root > * {
   grid-column: 4;
 }
+.works {
+  width: 2122px;
+  height: 1024px;
+  display: block;
+}
+.background {
+  background: rgba(14, 14, 14, 1);
+  width: 1440px;
+  height: 1024px;
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 341px;
+}
+.nothingtoShow {
+  position: absolute;
+  top: 462px;
+  left: 750px;
+  width: 622px;
+  height: 155px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.text__vl3Lg {
+  display: block;
+  font-size: 120px;
+  text-align: center;
+  font-family: "Libre Barcode 128";
+  font-weight: 400;
+  letter-spacing: 0em;
+  line-height: 5;
+  color: rgba(7, 140, 164, 0.3);
+}
+.comingSoon {
+  position: absolute;
+  top: 97px;
+  left: 0px;
+  width: 2122px;
+  height: 829px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.text__xdUyc {
+  display: block;
+  font-size: 50px;
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0em;
+  line-height: 1.1;
+  color: rgba(7, 140, 164, 1);
+}
+.goBack {
+  position: absolute;
+  top: 192px;
+  left: 0px;
+  width: 2122px;
+  height: 829px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.link {
+  display: block;
+  font-size: 30px;
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0em;
+  line-height: 1.1;
+  color: rgba(7, 140, 164, 1);
+}

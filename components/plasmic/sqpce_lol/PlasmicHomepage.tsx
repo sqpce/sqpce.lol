@@ -62,6 +62,7 @@ export type PlasmicHomepage__OverridesType = {
   home?: p.Flex<"div">;
   helloIAmSqpceAHardlyWorking3DModelerBasedInBelgium?: p.Flex<"div">;
   sqpce?: p.Flex<"div">;
+  text?: p.Flex<"div">;
 };
 
 export interface DefaultHomepageProps {}
@@ -148,21 +149,26 @@ function PlasmicHomepage__RenderFunc(props: {
               className={classNames(projectcss.all, sty.sqpce)}
             >
               <div
+                data-plasmic-name={"text"}
+                data-plasmic-override={overrides.text}
                 className={classNames(
                   projectcss.all,
                   projectcss.__wab_text,
-                  sty.text__xBAk7
+                  sty.text
                 )}
               >
                 {"sqpce"}
               </div>
             </div>
-            <div
+            <p.PlasmicLink
               className={classNames(
                 projectcss.all,
+                projectcss.a,
                 projectcss.__wab_text,
-                sty.text__yAdKw
+                sty.link__yAdKw,
+                ``
               )}
+              component={Link}
               onClick={async event => {
                 const $steps = {};
                 $steps["goToWorks"] = true
@@ -180,15 +186,18 @@ function PlasmicHomepage__RenderFunc(props: {
                   $steps["goToWorks"] = await $steps["goToWorks"];
                 }
               }}
+              platform={"nextjs"}
             >
               {"Works"}
-            </div>
-            <div
+            </p.PlasmicLink>
+            <p.PlasmicLink
               className={classNames(
                 projectcss.all,
+                projectcss.a,
                 projectcss.__wab_text,
-                sty.text__bxUgY
+                sty.link__bxUgY
               )}
+              component={Link}
               onClick={async event => {
                 const $steps = {};
                 $steps["goToHomepage"] = true
@@ -206,68 +215,132 @@ function PlasmicHomepage__RenderFunc(props: {
                   $steps["goToHomepage"] = await $steps["goToHomepage"];
                 }
               }}
+              platform={"nextjs"}
             >
               {"Home"}
-            </div>
-            <RobloxIcon
-              className={classNames(projectcss.all, sty.svg__dh27R)}
-              onClick={async event => {
-                const $steps = {};
-                $steps["goToHttpswwwrobloxcomusers147843940Profile"] = true
-                  ? (() => {
-                      const actionArgs = {
-                        destination:
-                          "https://www.roblox.com/users/147843940/profile"
-                      };
-                      return (({ destination }) => {
-                        __nextRouter?.push(destination);
-                      })?.apply(null, [actionArgs]);
-                    })()
-                  : undefined;
-                if (
-                  typeof $steps[
-                    "goToHttpswwwrobloxcomusers147843940Profile"
-                  ] === "object" &&
-                  typeof $steps["goToHttpswwwrobloxcomusers147843940Profile"]
-                    .then === "function"
-                ) {
-                  $steps["goToHttpswwwrobloxcomusers147843940Profile"] =
-                    await $steps["goToHttpswwwrobloxcomusers147843940Profile"];
-                }
-              }}
-              role={"img"}
-            />
-
-            <TwitterIcon
-              className={classNames(projectcss.all, sty.svg__u77K4)}
-              onClick={async event => {
-                const $steps = {};
-                $steps["goToHttpstwittercomsqpce"] = true
-                  ? (() => {
-                      const actionArgs = {
-                        destination: "https://twitter.com/sqpce"
-                      };
-                      return (({ destination }) => {
-                        __nextRouter?.push(destination);
-                      })?.apply(null, [actionArgs]);
-                    })()
-                  : undefined;
-                if (
-                  typeof $steps["goToHttpstwittercomsqpce"] === "object" &&
-                  typeof $steps["goToHttpstwittercomsqpce"].then === "function"
-                ) {
-                  $steps["goToHttpstwittercomsqpce"] = await $steps[
-                    "goToHttpstwittercomsqpce"
-                  ];
-                }
-              }}
-              role={"img"}
-            />
-
-            <DiscordIcon
-              className={classNames(projectcss.all, sty.svg__lL0ED)}
-              role={"img"}
-            />
+            </p.PlasmicLink>
+            <p.PlasmicLink
+              className={classNames(
+                projectcss.all,
+                projectcss.a,
+                sty.link___1Lxd
+              )}
+              component={Link}
+              href={"https://www.roblox.com/users/147843940/profile"}
+              platform={"nextjs"}
+              target={"_blank"}
+            >
+              <RobloxIcon
+                className={classNames(projectcss.all, sty.svg__dh27R)}
+                onClick={async event => {
+                  const $steps = {};
+                  $steps["goToHttpswwwrobloxcomusers147843940Profile"] = true
+                    ? (() => {
+                        const actionArgs = {
+                          destination:
+                            "https://www.roblox.com/users/147843940/profile"
+                        };
+                        return (({ destination }) => {
+                          __nextRouter?.push(destination);
+                        })?.apply(null, [actionArgs]);
+                      })()
+                    : undefined;
+                  if (
+                    typeof $steps[
+                      "goToHttpswwwrobloxcomusers147843940Profile"
+                    ] === "object" &&
+                    typeof $steps["goToHttpswwwrobloxcomusers147843940Profile"]
+                      .then === "function"
+                  ) {
+                    $steps["goToHttpswwwrobloxcomusers147843940Profile"] =
+                      await $steps[
+                        "goToHttpswwwrobloxcomusers147843940Profile"
+                      ];
+                  }
+                }}
+                role={"img"}
+              />
+            </p.PlasmicLink>
+            <p.PlasmicLink
+              className={classNames(
+                projectcss.all,
+                projectcss.a,
+                sty.link__i3J5
+              )}
+              component={Link}
+              href={"https://twitter.com/sqpce"}
+              platform={"nextjs"}
+              target={"_blank"}
+            >
+              <TwitterIcon
+                className={classNames(projectcss.all, sty.svg__u77K4)}
+                onClick={async event => {
+                  const $steps = {};
+                  $steps["goToHttpstwittercomsqpce"] = true
+                    ? (() => {
+                        const actionArgs = {
+                          destination: "https://twitter.com/sqpce"
+                        };
+                        return (({ destination }) => {
+                          __nextRouter?.push(destination);
+                        })?.apply(null, [actionArgs]);
+                      })()
+                    : undefined;
+                  if (
+                    typeof $steps["goToHttpstwittercomsqpce"] === "object" &&
+                    typeof $steps["goToHttpstwittercomsqpce"].then ===
+                      "function"
+                  ) {
+                    $steps["goToHttpstwittercomsqpce"] = await $steps[
+                      "goToHttpstwittercomsqpce"
+                    ];
+                  }
+                }}
+                role={"img"}
+              />
+            </p.PlasmicLink>
+            <p.PlasmicLink
+              className={classNames(
+                projectcss.all,
+                projectcss.a,
+                sty.link__gDs3P
+              )}
+              component={Link}
+              href={"https://discord.com/users/731572168454045777"}
+              platform={"nextjs"}
+              target={"_blank"}
+            >
+              <DiscordIcon
+                className={classNames(projectcss.all, sty.svg__lL0ED)}
+                onClick={async event => {
+                  const $steps = {};
+                  $steps["goToHttpsdiscordcomusers731572168454045777"] = true
+                    ? (() => {
+                        const actionArgs = {
+                          destination:
+                            "https://discord.com/users/731572168454045777"
+                        };
+                        return (({ destination }) => {
+                          __nextRouter?.push(destination);
+                        })?.apply(null, [actionArgs]);
+                      })()
+                    : undefined;
+                  if (
+                    typeof $steps[
+                      "goToHttpsdiscordcomusers731572168454045777"
+                    ] === "object" &&
+                    typeof $steps["goToHttpsdiscordcomusers731572168454045777"]
+                      .then === "function"
+                  ) {
+                    $steps["goToHttpsdiscordcomusers731572168454045777"] =
+                      await $steps[
+                        "goToHttpsdiscordcomusers731572168454045777"
+                      ];
+                  }
+                }}
+                role={"img"}
+              />
+            </p.PlasmicLink>
           </div>
         </div>
       </div>
@@ -280,13 +353,20 @@ const PlasmicDescendants = {
     "root",
     "home",
     "helloIAmSqpceAHardlyWorking3DModelerBasedInBelgium",
-    "sqpce"
+    "sqpce",
+    "text"
   ],
-  home: ["home", "helloIAmSqpceAHardlyWorking3DModelerBasedInBelgium", "sqpce"],
+  home: [
+    "home",
+    "helloIAmSqpceAHardlyWorking3DModelerBasedInBelgium",
+    "sqpce",
+    "text"
+  ],
   helloIAmSqpceAHardlyWorking3DModelerBasedInBelgium: [
     "helloIAmSqpceAHardlyWorking3DModelerBasedInBelgium"
   ],
-  sqpce: ["sqpce"]
+  sqpce: ["sqpce", "text"],
+  text: ["text"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -296,6 +376,7 @@ type NodeDefaultElementType = {
   home: "div";
   helloIAmSqpceAHardlyWorking3DModelerBasedInBelgium: "div";
   sqpce: "div";
+  text: "div";
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -363,6 +444,7 @@ export const PlasmicHomepage = Object.assign(
       "helloIAmSqpceAHardlyWorking3DModelerBasedInBelgium"
     ),
     sqpce: makeNodeComponent("sqpce"),
+    text: makeNodeComponent("text"),
 
     // Metadata about props expected for PlasmicHomepage
     internalVariantProps: PlasmicHomepage__VariantProps,

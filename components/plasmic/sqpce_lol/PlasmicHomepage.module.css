@@ -29,8 +29,8 @@
   height: 1057px;
   display: block;
   background: #0f0f0f;
-  padding-left: 361px;
-  padding-right: 364px;
+  padding-left: 0px;
+  padding-right: 0px;
 }
 .helloIAmSqpceAHardlyWorking3DModelerBasedInBelgium {
   backdrop-filter: blur(100px);
@@ -60,7 +60,7 @@
   justify-content: center;
   padding-right: 28px;
 }
-.text__xBAk7 {
+.text {
   display: block;
   font-size: 80px;
   text-align: center;
@@ -72,12 +72,13 @@
   padding-top: 0px;
   margin-top: 0px;
   position: absolute;
-  left: 24px;
-  top: -140px;
+  left: 6px;
+  top: -142px;
   padding-bottom: 0px;
   margin-bottom: 0px;
+  padding-left: 19px;
 }
-.text__yAdKw {
+.link__yAdKw {
   display: block;
   font-size: 40px;
   text-align: center;
@@ -92,23 +93,29 @@
   width: 133px;
   height: 47px;
 }
-.text__bxUgY {
+.link__bxUgY {
   display: block;
-  font-size: 40px;
-  text-align: center;
-  font-family: "Raleway", sans-serif;
-  font-weight: 400;
-  letter-spacing: 0em;
-  line-height: 1;
-  color: rgba(7, 140, 164, 1);
   position: absolute;
   top: 22px;
   left: 1122px;
   width: 152px;
   height: 42px;
+  margin-left: 0px;
+  letter-spacing: 0em;
+  line-height: 1;
+  text-align: center;
+  color: rgba(7, 140, 164, 1);
+  font-weight: 400;
+  font-size: 40px;
+  font-family: "Raleway", sans-serif;
+}
+.link___1Lxd {
+  position: absolute;
+  top: 699px;
+  left: 625px;
+  display: flex;
 }
 .svg__dh27R {
-  position: absolute;
   object-fit: cover;
   max-width: 100%;
   color: #088da5;
@@ -117,28 +124,35 @@
   height: 56px;
   display: block;
   transform-origin: top left;
-  top: 699px;
-  left: 625px;
+  flex-shrink: 0;
+}
+.link__i3J5 {
+  position: absolute;
+  top: 61.21%;
+  left: 47.69%;
+  display: flex;
 }
 .svg__u77K4 {
-  position: absolute;
   object-fit: cover;
   max-width: 100%;
   color: #088da5;
   width: 64px;
   height: 52px;
   display: block;
-  top: 61.21%;
-  left: 47.69%;
+  flex-shrink: 0;
+}
+.link__gDs3P {
+  position: absolute;
+  top: 61.11%;
+  left: 52.92%;
+  display: flex;
 }
 .svg__lL0ED {
-  position: absolute;
   object-fit: cover;
   max-width: 100%;
   color: #088da5;
   width: 69px;
   height: 53px;
   display: block;
-  top: 61.11%;
-  left: 52.92%;
+  flex-shrink: 0;
 }

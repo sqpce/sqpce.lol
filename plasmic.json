@@ -7,7 +7,7 @@
   },
   "style": {
     "scheme": "css-modules",
-    "defaultStyleCssFilePath": "plasmic/plasmic__default_style.css"
+    "defaultStyleCssFilePath": "plasmic/plasmic__default_style.module.css"
   },
   "images": {
     "scheme": "public-files",
@@ -55,6 +55,20 @@
           "scheme": "blackbox",
           "componentType": "page",
           "path": "/new-page"
+        },
+        {
+          "id": "6R42nZZIlShc",
+          "name": "Button",
+          "type": "managed",
+          "projectId": "r7bQFXtqbEtVEZD5aJhcPv",
+          "renderModuleFilePath": "plasmic/sqpce_lol/PlasmicButton.tsx",
+          "importSpec": {
+            "modulePath": "Button.tsx"
+          },
+          "cssFilePath": "plasmic/sqpce_lol/PlasmicButton.module.css",
+          "scheme": "blackbox",
+          "componentType": "component",
+          "plumeType": "button"
         }
       ],
       "icons": [
@@ -72,6 +86,16 @@
           "id": "1npxSAYOE0SJ",
           "name": "DiscordIcon",
           "moduleFilePath": "plasmic/sqpce_lol/icons/PlasmicIcon__Discord.tsx"
+        },
+        {
+          "id": "vYbZy2p1bmTJ",
+          "name": "ChecksvgIcon",
+          "moduleFilePath": "plasmic/sqpce_lol/icons/PlasmicIcon__Checksvg.tsx"
+        },
+        {
+          "id": "kpZ4e4cawOY8",
+          "name": "IconIcon",
+          "moduleFilePath": "plasmic/sqpce_lol/icons/PlasmicIcon__Icon.tsx"
         }
       ],
       "images": [

@@ -55,6 +55,12 @@ export const PlasmicWorks__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicWorks__OverridesType = {
   root?: p.Flex<"div">;
+  works?: p.Flex<"div">;
+  background?: p.Flex<"div">;
+  nothingtoShow?: p.Flex<"div">;
+  comingSoon?: p.Flex<"div">;
+  goBack?: p.Flex<"div">;
+  link?: p.Flex<"a"> & Partial<LinkProps>;
 };
 
 export interface DefaultWorksProps {}
@@ -112,20 +118,127 @@ function PlasmicWorks__RenderFunc(props: {
             projectcss.plasmic_tokens,
             sty.root
           )}
-        />
+        >
+          <div
+            data-plasmic-name={"works"}
+            data-plasmic-override={overrides.works}
+            className={classNames(projectcss.all, sty.works)}
+          >
+            <div
+              data-plasmic-name={"background"}
+              data-plasmic-override={overrides.background}
+              className={classNames(projectcss.all, sty.background)}
+            />
+
+            <div
+              data-plasmic-name={"nothingtoShow"}
+              data-plasmic-override={overrides.nothingtoShow}
+              className={classNames(projectcss.all, sty.nothingtoShow)}
+            >
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__vl3Lg
+                )}
+              >
+                {"nothingto show"}
+              </div>
+            </div>
+            <div
+              data-plasmic-name={"comingSoon"}
+              data-plasmic-override={overrides.comingSoon}
+              className={classNames(projectcss.all, sty.comingSoon)}
+            >
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__xdUyc
+                )}
+              >
+                {"coming soon\u2122\ufe0f"}
+              </div>
+            </div>
+            <div
+              data-plasmic-name={"goBack"}
+              data-plasmic-override={overrides.goBack}
+              className={classNames(projectcss.all, sty.goBack)}
+            >
+              <p.PlasmicLink
+                data-plasmic-name={"link"}
+                data-plasmic-override={overrides.link}
+                className={classNames(
+                  projectcss.all,
+                  projectcss.a,
+                  projectcss.__wab_text,
+                  sty.link
+                )}
+                component={Link}
+                onClick={async event => {
+                  const $steps = {};
+                  $steps["goToHomepage"] = true
+                    ? (() => {
+                        const actionArgs = { destination: `/` };
+                        return (({ destination }) => {
+                          __nextRouter?.push(destination);
+                        })?.apply(null, [actionArgs]);
+                      })()
+                    : undefined;
+                  if (
+                    typeof $steps["goToHomepage"] === "object" &&
+                    typeof $steps["goToHomepage"].then === "function"
+                  ) {
+                    $steps["goToHomepage"] = await $steps["goToHomepage"];
+                  }
+                }}
+                platform={"nextjs"}
+              >
+                {"go back"}
+              </p.PlasmicLink>
+            </div>
+          </div>
+        </div>
       </div>
     </React.Fragment>
   ) as React.ReactElement | null;
 }
 
 const PlasmicDescendants = {
-  root: ["root"]
+  root: [
+    "root",
+    "works",
+    "background",
+    "nothingtoShow",
+    "comingSoon",
+    "goBack",
+    "link"
+  ],
+  works: [
+    "works",
+    "background",
+    "nothingtoShow",
+    "comingSoon",
+    "goBack",
+    "link"
+  ],
+  background: ["background"],
+  nothingtoShow: ["nothingtoShow"],
+  comingSoon: ["comingSoon"],
+  goBack: ["goBack", "link"],
+  link: ["link"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
   (typeof PlasmicDescendants)[T][number];
 type NodeDefaultElementType = {
   root: "div";
+  works: "div";
+  background: "div";
+  nothingtoShow: "div";
+  comingSoon: "div";
+  goBack: "div";
+  link: "a";
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -188,6 +301,12 @@ export const PlasmicWorks = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
+    works: makeNodeComponent("works"),
+    background: makeNodeComponent("background"),
+    nothingtoShow: makeNodeComponent("nothingtoShow"),
+    comingSoon: makeNodeComponent("comingSoon"),
+    goBack: makeNodeComponent("goBack"),
+    link: makeNodeComponent("link"),
 
     // Metadata about props expected for PlasmicWorks
     internalVariantProps: PlasmicWorks__VariantProps,
