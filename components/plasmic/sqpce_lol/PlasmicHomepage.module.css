@@ -32,6 +32,30 @@
   padding-left: 0px;
   padding-right: 0px;
 }
+.text__jkNJp {
+  position: absolute;
+  font-family: "Raleway", sans-serif;
+  font-size: 40px;
+  font-weight: 400;
+  color: rgba(7, 140, 164, 1);
+  text-align: center;
+  line-height: 1;
+  letter-spacing: 0em;
+  left: 1310px;
+  top: 25px;
+}
+.text__vBMpE {
+  position: absolute;
+  font-family: "Raleway", sans-serif;
+  font-size: 40px;
+  font-weight: 400;
+  color: rgba(7, 140, 164, 1);
+  text-align: center;
+  line-height: 1;
+  letter-spacing: 0em;
+  left: 1178px;
+  top: 25px;
+}
 .helloIAmSqpceAHardlyWorking3DModelerBasedInBelgium {
   backdrop-filter: blur(100px);
   display: block;
@@ -60,7 +84,7 @@
   justify-content: center;
   padding-right: 28px;
 }
-.text {
+.text__xBAk7 {
   display: block;
   font-size: 80px;
   text-align: center;
@@ -77,37 +101,6 @@
   padding-bottom: 0px;
   margin-bottom: 0px;
   padding-left: 19px;
-}
-.link__yAdKw {
-  display: block;
-  font-size: 40px;
-  text-align: center;
-  font-family: "Raleway", sans-serif;
-  font-weight: 400;
-  letter-spacing: 0em;
-  line-height: 1;
-  color: rgba(7, 140, 164, 1);
-  position: absolute;
-  top: 22px;
-  left: 1278px;
-  width: 133px;
-  height: 47px;
-}
-.link__bxUgY {
-  display: block;
-  position: absolute;
-  top: 22px;
-  left: 1122px;
-  width: 152px;
-  height: 42px;
-  margin-left: 0px;
-  letter-spacing: 0em;
-  line-height: 1;
-  text-align: center;
-  color: rgba(7, 140, 164, 1);
-  font-weight: 400;
-  font-size: 40px;
-  font-family: "Raleway", sans-serif;
 }
 .svg__vB0Id {
   object-fit: cover;

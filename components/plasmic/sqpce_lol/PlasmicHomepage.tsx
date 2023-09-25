@@ -62,7 +62,6 @@ export type PlasmicHomepage__OverridesType = {
   home?: p.Flex<"div">;
   helloIAmSqpceAHardlyWorking3DModelerBasedInBelgium?: p.Flex<"div">;
   sqpce?: p.Flex<"div">;
-  text?: p.Flex<"div">;
 };
 
 export interface DefaultHomepageProps {}
@@ -127,6 +126,58 @@ function PlasmicHomepage__RenderFunc(props: {
             className={classNames(projectcss.all, sty.home)}
           >
             <div
+              className={classNames(
+                projectcss.all,
+                projectcss.__wab_text,
+                sty.text__jkNJp
+              )}
+              onClick={async event => {
+                const $steps = {};
+                $steps["goToWorks"] = true
+                  ? (() => {
+                      const actionArgs = { destination: `/new-page` };
+                      return (({ destination }) => {
+                        __nextRouter?.push(destination);
+                      })?.apply(null, [actionArgs]);
+                    })()
+                  : undefined;
+                if (
+                  typeof $steps["goToWorks"] === "object" &&
+                  typeof $steps["goToWorks"].then === "function"
+                ) {
+                  $steps["goToWorks"] = await $steps["goToWorks"];
+                }
+              }}
+            >
+              {"Works"}
+            </div>
+            <div
+              className={classNames(
+                projectcss.all,
+                projectcss.__wab_text,
+                sty.text__vBMpE
+              )}
+              onClick={async event => {
+                const $steps = {};
+                $steps["goToHomepage"] = true
+                  ? (() => {
+                      const actionArgs = { destination: `/` };
+                      return (({ destination }) => {
+                        __nextRouter?.push(destination);
+                      })?.apply(null, [actionArgs]);
+                    })()
+                  : undefined;
+                if (
+                  typeof $steps["goToHomepage"] === "object" &&
+                  typeof $steps["goToHomepage"].then === "function"
+                ) {
+                  $steps["goToHomepage"] = await $steps["goToHomepage"];
+                }
+              }}
+            >
+              {"Home"}
+            </div>
+            <div
               data-plasmic-name={
                 "helloIAmSqpceAHardlyWorking3DModelerBasedInBelgium"
               }
@@ -149,76 +200,15 @@ function PlasmicHomepage__RenderFunc(props: {
               className={classNames(projectcss.all, sty.sqpce)}
             >
               <div
-                data-plasmic-name={"text"}
-                data-plasmic-override={overrides.text}
                 className={classNames(
                   projectcss.all,
                   projectcss.__wab_text,
-                  sty.text
+                  sty.text__xBAk7
                 )}
               >
                 {"sqpce"}
               </div>
             </div>
-            <p.PlasmicLink
-              className={classNames(
-                projectcss.all,
-                projectcss.a,
-                projectcss.__wab_text,
-                sty.link__yAdKw,
-                ``
-              )}
-              component={Link}
-              onClick={async event => {
-                const $steps = {};
-                $steps["goToWorks"] = true
-                  ? (() => {
-                      const actionArgs = { destination: `/new-page` };
-                      return (({ destination }) => {
-                        __nextRouter?.push(destination);
-                      })?.apply(null, [actionArgs]);
-                    })()
-                  : undefined;
-                if (
-                  typeof $steps["goToWorks"] === "object" &&
-                  typeof $steps["goToWorks"].then === "function"
-                ) {
-                  $steps["goToWorks"] = await $steps["goToWorks"];
-                }
-              }}
-              platform={"nextjs"}
-            >
-              {"Works"}
-            </p.PlasmicLink>
-            <p.PlasmicLink
-              className={classNames(
-                projectcss.all,
-                projectcss.a,
-                projectcss.__wab_text,
-                sty.link__bxUgY
-              )}
-              component={Link}
-              onClick={async event => {
-                const $steps = {};
-                $steps["goToHomepage"] = true
-                  ? (() => {
-                      const actionArgs = { destination: `/` };
-                      return (({ destination }) => {
-                        __nextRouter?.push(destination);
-                      })?.apply(null, [actionArgs]);
-                    })()
-                  : undefined;
-                if (
-                  typeof $steps["goToHomepage"] === "object" &&
-                  typeof $steps["goToHomepage"].then === "function"
-                ) {
-                  $steps["goToHomepage"] = await $steps["goToHomepage"];
-                }
-              }}
-              platform={"nextjs"}
-            >
-              {"Home"}
-            </p.PlasmicLink>
             <RobloxIcon
               className={classNames(projectcss.all, sty.svg__vB0Id)}
               onClick={async event => {
@@ -314,20 +304,13 @@ const PlasmicDescendants = {
     "root",
     "home",
     "helloIAmSqpceAHardlyWorking3DModelerBasedInBelgium",
-    "sqpce",
-    "text"
+    "sqpce"
   ],
-  home: [
-    "home",
-    "helloIAmSqpceAHardlyWorking3DModelerBasedInBelgium",
-    "sqpce",
-    "text"
-  ],
+  home: ["home", "helloIAmSqpceAHardlyWorking3DModelerBasedInBelgium", "sqpce"],
   helloIAmSqpceAHardlyWorking3DModelerBasedInBelgium: [
     "helloIAmSqpceAHardlyWorking3DModelerBasedInBelgium"
   ],
-  sqpce: ["sqpce", "text"],
-  text: ["text"]
+  sqpce: ["sqpce"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -337,7 +320,6 @@ type NodeDefaultElementType = {
   home: "div";
   helloIAmSqpceAHardlyWorking3DModelerBasedInBelgium: "div";
   sqpce: "div";
-  text: "div";
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -405,7 +387,6 @@ export const PlasmicHomepage = Object.assign(
       "helloIAmSqpceAHardlyWorking3DModelerBasedInBelgium"
     ),
     sqpce: makeNodeComponent("sqpce"),
-    text: makeNodeComponent("text"),
 
     // Metadata about props expected for PlasmicHomepage
     internalVariantProps: PlasmicHomepage__VariantProps,
